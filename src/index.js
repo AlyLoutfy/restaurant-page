@@ -1,1 +1,4 @@
-console.log("We're live baby");
+import "./style.css";
+import initWebsite from "./page-load";
+
+initWebsite();

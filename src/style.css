@@ -1,0 +1,61 @@
+:root {
+  --background: #FDE8B7;
+  --font: #EC6806;
+  --header: #fff;
+  --calculator: #212121;
+  --screen: #86bcc6;
+  --buttons: #414141;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  color: var(--font);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+  margin-bottom: 100px;
+  background: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* #content {} */
+
+.header {
+  background-color: var(--background);
+  color: var(--font);
+  height: 80px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  text-align: left;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--font);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 35px;
+}
