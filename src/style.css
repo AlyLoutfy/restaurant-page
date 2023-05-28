@@ -1,5 +1,6 @@
 :root {
   --background: #FDE8B7;
+  --mainBackground: rgba(255, 255, 255, 0.9);
   --font: #EC6806;
   --header: #fff;
   --calculator: #212121;
@@ -23,19 +24,16 @@ html {
 body {
   color: var(--font);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
-  margin-bottom: 100px;
   background: url('./assets/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* #content {} */
-
 .header {
   background-color: var(--background);
   color: var(--font);
   height: 80px;
-  padding: 0 70px;
+  padding: 0 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,19 +41,54 @@ body {
 
 .header h1 {
   text-align: left;
+  cursor: pointer;
 }
 
 .nav a {
-  font-weight: 600;
-  font-size: 20px;
   color: var(--font);
-  letter-spacing: 1.5px;
-  cursor: pointer;
   text-transform: uppercase;
-  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3px;
 }
 
 .nav {
   display: flex;
   gap: 35px;
 }
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: var(--mainBackground);
+  border-radius: 9px;
+}
+
+.home {
+  font-size: 22px;
+}
+
+.menu {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu img {
+  width: 150px;
+}
+
+.contact {}

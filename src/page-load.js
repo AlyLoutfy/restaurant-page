@@ -21,24 +21,35 @@ function createNav() {
 
   const home = document.createElement("a");
   home.textContent = "Home";
+  nav.appendChild(home);
+  home.addEventListener("click", loadHome);
 
   const menu = document.createElement("a");
   menu.textContent = "Menu";
+  nav.appendChild(menu);
+  menu.addEventListener("click", loadMenu);
 
   const contact = document.createElement("a");
   contact.textContent = "Contact";
-
-  nav.appendChild(home);
-  nav.appendChild(menu);
   nav.appendChild(contact);
+  contact.addEventListener("click", loadContact);
 
   return nav;
+}
+
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
+  return main;
 }
 
 function initWebsite() {
   const content = document.getElementById("content");
 
   content.appendChild(createHeader());
+  content.appendChild(createMain());
+  content.appendChild(loadHome());
 }
 
 export default initWebsite;
